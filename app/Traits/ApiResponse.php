@@ -10,4 +10,11 @@ trait ApiResponse
             'message' => $message
         ], $status);
     }
+
+    public function error($message, $status)
+    {
+        return response()->json([
+            'error' => $message
+        ], $status);
+    }
 }
